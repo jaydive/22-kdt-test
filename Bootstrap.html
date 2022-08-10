@@ -21,19 +21,51 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">학원소개</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">컴퓨터 수업</a>
+                        <li class="nav-item dropdown"> <!-- dropdown 클래스 추가 -->
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">컴퓨터 수업</a> <!-- toggle 클래스 추가 & id, role 등 필요한 속성 추가 -->
+                            <!-- ul 태그 들어갈 자리-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">초등학생 코딩</a></li>
+                                <li><a class="dropdown-item" href="#">초등학생 샘플강의</a></li>
+                                <li><a class="dropdown-item" href="#">중고등학생 코딩</a></li>
+                                <li><a class="dropdown-item" href="#">중고등학생 샘플강의</a></li>
+                                <li><a class="dropdown-item" href="#">대학생/전공자 코딩</a></li>
+                                <li><a class="dropdown-item" href="#">회사 실무/자격증 취득</a></li>
+                           </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">교과 수업</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">오시는 길</a>
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#myModal">오시는 길</a> <!-- Modal과 '오시는길'을 연결 --> 
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+
+        	
+        <!-- Modal -->
+        <div class="modal" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> <!-- id="myModal"을 적용해 버튼과 연결시킴 -->
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="myModal">Modal title</h5> <!-- id 적용-->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="map.png"> <!-- 약도 이미지 들어가는 곳-->
+                        <br>
+                        코딩온 오시는 길
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!--JS 불러오기-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     </body>
